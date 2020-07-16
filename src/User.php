@@ -1,5 +1,6 @@
 <?php
 
+namespace App;
 
 class User
 {
@@ -21,7 +22,6 @@ class User
         if ($this->name !== "") {
             return true;
         }
-
     }
 
     public function isFirstnameValid()
