@@ -57,6 +57,12 @@ class UserTest extends TestCase
         $this->assertNotEquals($user->isEmailValid(), true, "User's email is valid");
     }
 
+    public function testIsEmptyEmail()
+    {
+        $user = new User("test", "test", "", 10);
+        $this->assertNotEquals($user->isEmailValid(), true, "User's email is valid");
+    }
+
     public function testIsValid() {
         $user = new User("test", "test", "mail@mail.fr", 15);
         $this->assertEquals($user->isValid(), true, "User's isn't valid");
